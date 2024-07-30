@@ -153,10 +153,14 @@ button {
 	display: inline-block;
     background-color: #5A7AB3;
     box-shadow: 0 6px #4063A4;
-    font-size: 100%;
+    font-size: 80%;
     line-height: 1;
     position: relative;
 	cursor: pointer;
+    border-radius: 1.5em;
+    top: 0;
+    transition: .2s box-shadow,.2s top,.4s background;
+    font-weight: bold;
 }
 
 button:hover {
@@ -171,30 +175,35 @@ button:hover {
 
 .add-button-space label{
     margin-left: 60px;
-    line-height: 150%;
+    line-height: 200%;
 }
 
 .removeButton {
-    width: 35px;
+    width: 25px;
+    height: 20px;
     margin: 5px 5px;
     padding: 5px;
-    margin-left: 65px;
+    margin-left: 70px;
     margin-bottom: 5px;
-    font-size: 100%;
-    background-color: rgb(247, 66, 66);
-    box-shadow: 0 6px rgb(146, 62, 62);
+    margin-top: 5px;
+    background-color: #5A7AB3;;
+    box-shadow: 0 6px #4063A4;
     line-height: 1;
     position: relative;
 	cursor: pointer;
+    border-radius: 1.5em;
+    top: 0;
+    transition: .2s box-shadow,.2s top,.4s background;
+    font-weight: bold;
 }
 
 .removeButton:hover {
-    box-shadow: 0 5px rgb(146, 62, 62);
+    box-shadow: 0 5px #4063A4;
 	top: 1px;
 }
 
 .removeButton:active {
-    box-shadow: 0 6px rgb(146, 62, 62);
+    box-shadow: 0 0 #4063A4;
 	top: 6px;
 }
 
@@ -212,5 +221,14 @@ button:hover {
 
 .add-button {
     margin-left: 10px;
-    margin-top: 15px;
+    margin-top: 5px;
+    width: 35px;
+    height: 25px;
+    padding: 5px;
+    line-height: 1;
+	cursor: pointer;
+    border-radius: 1.5em;
+    top: 0;
+    transition: .2s box-shadow,.2s top,.4s background;
+    font-weight: bold;
 }

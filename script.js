@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div>-------------------------------|</div>
                 <div class="form-start-end"><input type="text" name="start" placeholder="Start" required><input type="text" name="end" placeholder="End" required></div>
                 <div class="form-center"><input type="text" name="meter" placeholder="Meter" required>m</div>
-                <div id="removeButton"><button type="button" class="button removeButton">-</button></div>
+                <div id="removeButton"><button type="button" class="button removeButton">ー</button></div>
             </form>`;
 
         formContainer.insertBefore(newFormSection, addFormButton.parentNode); // Insert new form section before the button
