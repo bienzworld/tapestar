@@ -8,12 +8,19 @@ body {
     margin: 0;
 }
 
+hr {
+    margin-bottom: 50px;
+    border-top: 3px double #8c8b8b;
+}
+
 .container {
     background-color: #e0e0e0;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    max-width: 80em;
+    margin: 2em auto;
 }
 
 header {
@@ -141,19 +148,25 @@ header {
 
 button {
     padding: 10px 20px;
-    background-color: #4c6faf;
     color: white;
-    border: none;
-    cursor: pointer;
+	border: none;
+	display: inline-block;
+    background-color: #5A7AB3;
+    box-shadow: 0 6px #4063A4;
+    font-size: 100%;
+    line-height: 1;
+    position: relative;
+	cursor: pointer;
 }
 
 button:hover {
-    background-color: #456fa0;
+    box-shadow: 0 5px #4063A4;
+	top: 1px;
 }
 
-.form-add-button {
-    margin-left: 5px;
-    margin-top: 15px;
+.button:active {
+	box-shadow: 0 0 #4063A4;
+	top: 6px;
 }
 
 .add-button-space label{
@@ -161,13 +174,28 @@ button:hover {
     line-height: 150%;
 }
 
-#removeButton {
-    width: 10px;
+.removeButton {
+    width: 35px;
     margin: 5px 5px;
     padding: 5px;
-    margin-left: 55px;
-    margin-top: -5px;
+    margin-left: 65px;
+    margin-bottom: 5px;
+    font-size: 100%;
+    background-color: rgb(247, 66, 66);
+    box-shadow: 0 6px rgb(146, 62, 62);
+    line-height: 1;
+    position: relative;
+	cursor: pointer;
+}
 
+.removeButton:hover {
+    box-shadow: 0 5px rgb(146, 62, 62);
+	top: 1px;
+}
+
+.removeButton:active {
+    box-shadow: 0 6px rgb(146, 62, 62);
+	top: 6px;
 }
 
 .result-container {
@@ -180,4 +208,9 @@ button:hover {
     flex: 1;
     padding: 5px;
     margin-right: 10px;
+}
+
+.add-button {
+    margin-left: 10px;
+    margin-top: 15px;
 }
