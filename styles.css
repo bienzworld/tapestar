@@ -231,6 +231,10 @@ button:hover {
     margin-top: 20px;
 }
 
+.result-container button {
+    margin-bottom: 10px;
+}
+
 .result-container input {
     flex: 1;
     padding: 5px;
