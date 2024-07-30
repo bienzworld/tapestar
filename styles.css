@@ -67,6 +67,24 @@ header {
     margin-bottom: 20px;
 }
 
+.r-out {
+    width: 65px;
+    margin: 5px 5px;
+    display: block;
+    position: relative;
+    left: 150px;
+    top: 25px;
+}
+
+.l-out {
+    width: 65px;
+    margin: 5px 5px;
+    display: block;
+    position: relative;
+    right: 150px;
+    top: 25px;
+}
+
 .radio-group {
     display: flex;
     align-items: center;
