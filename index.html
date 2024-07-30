@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAPESTAR</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="source/image/logo.png" alt="Faraday Factory Logo" class="logo">
+            <div class="header-text">
+                <h1>TAPESTAR</h1>
+                <p>Filename Generator</p>
+            </div>
+            <div class="version">v1.0</div>
+        </header>
+        <div class="form-container">
+            <div class="input-group">
+                <label>Total Length:</label>
+                <input type="text" id="totalLength" placeholder="Total Length" readonly>
+            </div>
+            <div class="radio-group">
+                <label><input type="radio" name="metal" value="Cu" id="radioCu"> Cu</label>
+                <label><input type="radio" name="metal" value="Ag" id="radioAg"> Ag</label>
+            </div>
+            <div class="form-section" id="formSection1">
+                <form id="customForm1">
+                    <div class="form-tape-name">
+                        <label>#</label>
+                        <input type="text" name="tape-name" placeholder="Tape Name" required>
+                    </div>
+                    <div class="form-center"><input type="text" name="N1" placeholder="N1"></div>
+                    <div>|-------------------------------|</div>
+                    <div class="form-start-end"><input type="text" name="start" placeholder="Start" required><input type="text" name="end" placeholder="End" required></div>
+                    <div class="form-center"><input type="text" name="meter" placeholder="Meter" required>m</div>
+                </form>
+            </div>
+            <div class="form-section" id="formSection2">
+                <form id="customForm2">
+                    <div class="form-tape-name">
+                        <label>#</label>
+                        <input type="text" name="tape-name" placeholder="Tape Name" required>
+                    </div>
+                    <div class="form-center"><input type="text" name="N1" placeholder="N1"></div>
+                    <div>-------------------------------|</div>
+                    <div class="form-start-end"><input type="text" name="start" placeholder="Start" required><input type="text" name="end" placeholder="End" required></div>
+                    <div class="form-center"><input type="text" name="meter" placeholder="Meter" required>m</div>
+                </form>
+            </div>
+            <div class="form-section" id="formSection3">
+                <form id="customForm3">
+                    <div class="form-tape-name">
+                        <label>#</label>
+                        <input type="text" name="tape-name" placeholder="Tape Name" required>
+                    </div>
+                    <div class="form-center"><input type="text" name="N1" placeholder="N1"></div>
+                    <div>-------------------------------|</div>
+                    <div class="form-start-end"><input type="text" name="start" placeholder="Start" required><input type="text" name="end" placeholder="End" required></div>
+                    <div class="form-center"><input type="text" name="meter" placeholder="Meter" required>m</div>
+                </form>
+            </div>
+            <div class="form-section" id="formSection4">
+                <form id="customForm4">
+                    <div class="form-tape-name">
+                        <label>#</label>
+                        <input type="text" name="tape-name" placeholder="Tape Name" required>
+                    </div>
+                    <div class="form-center"><input type="text" name="N1" placeholder="N1"></div>
+                    <div>-------------------------------|</div>
+                    <div class="form-start-end"><input type="text" name="start" placeholder="Start" required><input type="text" name="end" placeholder="End" required></div>
+                    <div class="form-center"><input type="text" name="meter" placeholder="Meter" required>m</div>
+                </form>
+            </div>
+            <div class="form-section">
+                <form id="addFormButton" class="form-add-button">
+                    <div class="add-button-space">
+                        <label></label>
+                    </div>
+                    <div class="add-button-space">
+                        <label></label>
+                    </div>
+                    <div><button type="button" id="addFormButton" class="form-add-button">+</button></div> 
+                </form>
+            </div>
+            <div>
+                <button type="button" id="generateButton">Generate</button>
+            </div>
+
+            <div id="resultContainer" class="result-container">
+                <input type="text" id="generatedResult" readonly>
+                <button type="button" id="copyButton">Copy</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
