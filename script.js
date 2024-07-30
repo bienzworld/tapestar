@@ -38,9 +38,12 @@ document.addEventListener('DOMContentLoaded', function() {
         const forms = document.querySelectorAll('.form-section form');
         let concatenatedResult = '';
         let totalMeters = 0;
-        const out = document.querySelector('input[name="out"]:checked');
+        const outDirection = document.querySelector('input[name="out"]:checked').value;
 
-        forms.forEach((form) => {
+        // Determine the order of forms based on the selected radio button
+        const orderedForms = outDirection === 'Rout' ? Array.from(forms) : Array.from(forms).reverse();
+
+        orderedForms.forEach((form) => {
             const inputs = form.querySelectorAll('input[type="text"]');
             const metal = document.querySelector('input[name="metal"]:checked');
 
@@ -50,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             let formValues = Array.from(inputs).map(input => input.value.trim());
-            
+
             // Ensure optional formValues[1] is empty if it's not provided
             formValues[1] = formValues[1] || '';
             
@@ -62,7 +65,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 concatenatedResult += `#${formValues[0]} (${formValues[2]}-${formValues[3]}) ${formValues[4]}m ${metal.value} `;
                 totalMeters += parseFloat(formValues[4]);
             }
-            
         });
 
         const generatedResult = document.getElementById('generatedResult');
