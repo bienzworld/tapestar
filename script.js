@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const forms = document.querySelectorAll('.form-section form');
         let concatenatedResult = '';
         let totalMeters = 0;
+        const out = document.querySelector('input[name="out"]:checked');
 
         forms.forEach((form) => {
             const inputs = form.querySelectorAll('input[type="text"]');
@@ -49,15 +50,15 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             let formValues = Array.from(inputs).map(input => input.value.trim());
-
+            
             // Ensure optional formValues[1] is empty if it's not provided
             formValues[1] = formValues[1] || '';
-
+            
             // Append to the result only if required fields are not empty
             if (formValues[0] && formValues[1] && formValues[2] && formValues[3] && formValues[4] && metal) {
                 concatenatedResult += `#${formValues[0]} (${formValues[2]}-${formValues[3]}) ${formValues[1]} ${formValues[4]}m ${metal.value} `;
                 totalMeters += parseFloat(formValues[4]);
-            } else if (formValues[0] && formValues[2] && formValues[3] && formValues[4] && metal){
+            } else if (formValues[0] && formValues[2] && formValues[3] && formValues[4] && metal) {
                 concatenatedResult += `#${formValues[0]} (${formValues[2]}-${formValues[3]}) ${formValues[4]}m ${metal.value} `;
                 totalMeters += parseFloat(formValues[4]);
             }

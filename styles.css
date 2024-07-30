@@ -68,9 +68,19 @@ header {
 }
 
 .input-group label,
-.radio-group label {
+.radio-group label,
+.radio-output label {
     margin-right: 10px;
 }
+
+.radio-output {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -40px;
+    margin-bottom: 25px;
+}
+
 
 .form-section {
     display: inline-flex;

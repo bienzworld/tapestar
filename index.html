@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TAPESTAR</title>
+    <link rel="shortcut icon" href="#">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -22,8 +23,12 @@
                 <input type="text" id="totalLength" placeholder="Total Length" readonly>
             </div>
             <div class="radio-group">
-                <label><input type="radio" name="metal" value="Cu" id="radioCu"> Cu</label>
+                <label><input type="radio" name="metal" value="Cu" id="radioCu" checked> Cu</label>
                 <label><input type="radio" name="metal" value="Ag" id="radioAg"> Ag</label>
+            </div>
+            <div class="radio-output">
+                <label><input type="radio" name="out" value="Rout" id="Rout" checked> Out</label>
+                <label><input type="radio" name="out" value="Lout" id="Lout"> Out</label>
             </div>
             <div class="form-section" id="formSection1">
                 <form id="customForm1">
