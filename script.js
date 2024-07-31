@@ -57,14 +57,26 @@ document.addEventListener('DOMContentLoaded', function() {
             // Ensure optional formValues[1] is empty if it's not provided
             formValues[1] = formValues[1] || '';
             
-            // Append to the result only if required fields are not empty
-            if (formValues[0] && formValues[1] && formValues[2] && formValues[3] && formValues[4] && metal) {
-                concatenatedResult += `#${formValues[0]} (${formValues[2]}-${formValues[3]}) ${formValues[1]} ${formValues[4]}m ${metal.value} `;
-                totalMeters += parseFloat(formValues[4]);
-            } else if (formValues[0] && formValues[2] && formValues[3] && formValues[4] && metal) {
-                concatenatedResult += `#${formValues[0]} (${formValues[2]}-${formValues[3]}) ${formValues[4]}m ${metal.value} `;
-                totalMeters += parseFloat(formValues[4]);
+            if (outDirection === 'Rout') {
+                // Append to the result only if required fields are not empty
+                if (formValues[0] && formValues[1] && formValues[2] && formValues[3] && formValues[4] && metal) {
+                    concatenatedResult += `#${formValues[0]} (${formValues[2]}-${formValues[3]}) ${formValues[1]} ${formValues[4]}m ${metal.value} `;
+                    totalMeters += parseFloat(formValues[4]);
+                } else if (formValues[0] && formValues[2] && formValues[3] && formValues[4] && metal) {
+                    concatenatedResult += `#${formValues[0]} (${formValues[2]}-${formValues[3]}) ${formValues[4]}m ${metal.value} `;
+                    totalMeters += parseFloat(formValues[4]);
+                }
+            } else {
+                // Append to the result only if required fields are not empty
+                if (formValues[0] && formValues[1] && formValues[2] && formValues[3] && formValues[4] && metal) {
+                    concatenatedResult += `#${formValues[0]} (${formValues[3]}-${formValues[2]}) ${formValues[1]} ${formValues[4]}m ${metal.value} `;
+                    totalMeters += parseFloat(formValues[4]);
+                } else if (formValues[0] && formValues[2] && formValues[3] && formValues[4] && metal) {
+                    concatenatedResult += `#${formValues[0]} (${formValues[3]}-${formValues[2]}) ${formValues[4]}m ${metal.value} `;
+                    totalMeters += parseFloat(formValues[4]);
+                }
             }
+
         });
 
         const generatedResult = document.getElementById('generatedResult');
