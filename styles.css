@@ -70,7 +70,7 @@ header {
 .r-out {
     width: 65px;
     margin: 5px 5px;
-    display: block;
+    display: flex;
     position: relative;
     left: 150px;
     top: 25px;
@@ -79,7 +79,7 @@ header {
 .l-out {
     width: 65px;
     margin: 5px 5px;
-    display: block;
+    display: flex;
     position: relative;
     right: 150px;
     top: 25px;
