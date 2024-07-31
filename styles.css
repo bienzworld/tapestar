@@ -9,7 +9,7 @@ body {
 }
 
 hr {
-    margin-bottom: 50px;
+    margin-bottom: 60px;
     border-top: 3px double #8c8b8b;
 }
 
@@ -67,23 +67,18 @@ header {
     margin-bottom: 20px;
 }
 
-.r-out {
-    width: 65px;
-    margin: 5px 5px;
+.out-image {
     display: flex;
-    position: relative;
-    left: 150px;
-    top: 25px;
+    align-items: center;
+    justify-content:space-between;
 }
 
-.l-out {
+.out-image img{
     width: 65px;
-    margin: 5px 5px;
-    display: flex;
-    position: relative;
-    right: 150px;
-    top: 25px;
+    margin: 5px;
+    margin-top: -10px;
 }
+
 
 .radio-group {
     display: flex;
